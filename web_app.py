@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import datetime
 import streamlit as st
-import plotly.graph_objects as go
+#import plotly.graph_objects as go
 
 st.write("""
 # Game Succession Prediction
@@ -42,8 +42,8 @@ df_game = data[columns]
 # Convert the first row of the DataFrame to a list
 y = df_game.values.tolist()[0]
 
-fig = go.Figure(data=go.Bar(x=columns, y=y), layout_title_text='Game Features')
-st.plotly_chart(fig, use_container_width=True)
+#fig = go.Figure(data=go.Bar(x=columns, y=y), layout_title_text='Game Features')
+#st.plotly_chart(fig, use_container_width=True)
 
 model_final_pipe = pickle.load(open('model_trained.pkl', 'rb'))
 
