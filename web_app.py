@@ -17,9 +17,9 @@ st.markdown(link, unsafe_allow_html=True)
 st.sidebar.header('Input Parameters')
 
 def user_input_features():
-    EU_Sales = st.sidebar.slider('EU_Sales', 90000, 360000, 180000)
-    NA_Sales = st.sidebar.slider('NA_Sales', 90000, 360000, 180000)
-    JP_Sales = st.sidebar.slider('JP_Sales', 90000, 360000, 180000)
+    EU_Sales = st.sidebar.slider('EU_Sales', 0.001, 10, 29.02)
+    NA_Sales = st.sidebar.slider('NA_Sales', 0.001, 25, 41.49)
+    JP_Sales = st.sidebar.slider('JP_Sales', 0.001, 4, 10.22)
     
     data = {'EU_Sales': EU_Sales,
             'NA_Sales': NA_Sales,
@@ -32,7 +32,7 @@ df = user_input_features()
 
 # Show user inputs
 st.subheader('Input parameters')
-st.write(data)
+st.write(df)
 
 # Create Plotly plot
 columns = ['EU_Sales', 'NA_Sales', 'JP_Sales']
