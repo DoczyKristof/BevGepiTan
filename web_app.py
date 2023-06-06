@@ -17,9 +17,9 @@ st.markdown(link, unsafe_allow_html=True)
 st.sidebar.header('Input Parameters')
 
 def user_input_features():
-    EU_Sales = st.sidebar.slider('EU_Sales', 0.01, 1.0, 29.02)
-    NA_Sales = st.sidebar.slider('NA_Sales', 0.01, 2.0, 41.49)
-    JP_Sales = st.sidebar.slider('JP_Sales', 0.01, 4.0, 10.22)
+    EU_Sales = st.sidebar.slider('EU_Sales', 0.01, 1.0, 30.02)
+    NA_Sales = st.sidebar.slider('NA_Sales', 0.01, 2.0, 42.49)
+    JP_Sales = st.sidebar.slider('JP_Sales', 0.01, 4.0, 15.22)
     
     data = {'EU_Sales': EU_Sales,
             'NA_Sales': NA_Sales,
