@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import datetime
 import streamlit as st
-import plotly.graph_objects as go
+#import plotly.graph_objects as go
 
 st.write("""
 # Game Succession Prediction
@@ -17,9 +17,9 @@ st.markdown(link, unsafe_allow_html=True)
 st.sidebar.header('Input Parameters')
 
 def user_input_features():
-    EU_Sales = st.sidebar.slider('budget', 90000, 360000, 180000)
-    NA_Sales = st.sidebar.slider('budget', 90000, 360000, 180000)
-    JP_Sales = st.sidebar.slider('budget', 90000, 360000, 180000)
+    EU_Sales = st.sidebar.slider('EU_Sales', 90000, 360000, 180000)
+    NA_Sales = st.sidebar.slider('NA_Sales', 90000, 360000, 180000)
+    JP_Sales = st.sidebar.slider('JP_Sales', 90000, 360000, 180000)
     
     data = {'EU_Sales': EU_Sales,
             'NA_Sales': NA_Sales,
@@ -42,8 +42,8 @@ df_game = data[columns]
 # Convert the first row of the DataFrame to a list
 y = df_game.values.tolist()[0]
 
-fig = go.Figure(data=go.Bar(x=columns, y=y), layout_title_text='Game Features')
-st.plotly_chart(fig, use_container_width=True)
+#fig = go.Figure(data=go.Bar(x=columns, y=y), layout_title_text='Game Features')
+#st.plotly_chart(fig, use_container_width=True)
 
 model_final_pipe = pickle.load(open('model_trained.pkl', 'rb'))
 
