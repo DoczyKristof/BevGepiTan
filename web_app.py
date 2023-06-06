@@ -5,6 +5,8 @@ import datetime
 import streamlit as st
 import plotly.graph_objects as go
 
+!pip install plotly
+
 st.write("""
 # Game Succession Prediction
 ## This app hopefully might predict a game's succession based on data.
