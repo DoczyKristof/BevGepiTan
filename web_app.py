@@ -38,7 +38,7 @@ st.write(df)
 columns = ['EU_Sales', 'NA_Sales', 'JP_Sales']
 
 # create a new DataFrame with the selected columns
-df_game = data[columns]
+df_game = df[columns]
 # Convert the first row of the DataFrame to a list
 y = df_game.values.tolist()[0]
 
