@@ -45,7 +45,7 @@ st.subheader('Input parameters')
 st.write(df)
 
 # Create Plotly plot
-columns = ['EU_Sales', 'NA_Sales', 'JP_Sales']
+columns = ['EU_Sales (M dollars)', 'NA_Sales (M dollars)', 'JP_Sales (M dollars)']
 
 # create a new DataFrame with the selected columns
 df_game = df[columns]
