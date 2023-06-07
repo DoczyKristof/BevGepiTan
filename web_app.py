@@ -42,7 +42,7 @@ df_game = df[columns]
 # Convert the first row of the DataFrame to a list
 y = df_game.values.tolist()[0]
 
-fig = go.Figure(data=go.Bar(x=columns, y=y), layout_title_text='Game sollinged units numbers')
+fig = go.Figure(data=go.Bar(x=columns, y=y), layout_title_text='Game selling units numbers')
 st.plotly_chart(fig, use_container_width=True)
 
 model_final_pipe = pickle.load(open('model_trained.pkl', 'rb'))
