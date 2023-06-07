@@ -24,9 +24,9 @@ st.markdown(link, unsafe_allow_html=True)
 st.sidebar.header('Input Parameters')
 
 def user_input_features():
-    EU_Sales = st.sidebar.slider('EU_Sales', 0.01, 30.02, 0.02)
-    NA_Sales = st.sidebar.slider('NA_Sales', 0.01, 42.49, 0.49)
-    JP_Sales = st.sidebar.slider('JP_Sales', 0.01, 15.22, 0.22)
+    EU_Sales = st.sidebar.slider('EU Sales', 0.01, 30.02, 0.02)
+    NA_Sales = st.sidebar.slider('NA Sales', 0.01, 42.49, 0.49)
+    JP_Sales = st.sidebar.slider('JP Sales', 0.01, 15.22, 0.22)
     Genre = st.sidebar.selectbox('Genre',(genres))
     Platform = st.sidebar.selectbox('Platform',(platforms))
     Publisher = st.sidebar.selectbox('Publisher',(publishers))
