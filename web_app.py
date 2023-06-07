@@ -28,8 +28,8 @@ def user_input_features():
     NA_Sales = st.sidebar.slider('NA_Sales', 0.01, 42.49, 0.49)
     JP_Sales = st.sidebar.slider('JP_Sales', 0.01, 15.22, 0.22)
     Genre = st.sidebar.selectbox('Genre',(genres))
-    Platform = st.sidebar.selectbox('Platform',(Platform))
-    Publisher = st.sidebar.selectbox('Publisher',(Publisher))
+    Platform = st.sidebar.selectbox('Platform',(platforms))
+    Publisher = st.sidebar.selectbox('Publisher',(publishers))
     
     data = {'EU_Sales': EU_Sales,
             'NA_Sales': NA_Sales,
