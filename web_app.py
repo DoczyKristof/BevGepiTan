@@ -27,9 +27,9 @@ def user_input_features():
     EU_Sales = st.sidebar.slider('EU_Sales', 0.01, 30.02, 0.02)
     NA_Sales = st.sidebar.slider('NA_Sales', 0.01, 42.49, 0.49)
     JP_Sales = st.sidebar.slider('JP_Sales', 0.01, 15.22, 0.22)
-    Genre = st.sidebar.selectbox('Genre',('Válassz egyet!', genres))
-    Platform = st.sidebar.selectbox('Genre',('Válassz egyet!', Platform))
-    Publisher = st.sidebar.selectbox('Genre',('Válassz egyet!', Publisher))
+    Genre = st.sidebar.selectbox('Genre',(genres))
+    Platform = st.sidebar.selectbox('Platform',(Platform))
+    Publisher = st.sidebar.selectbox('Publisher',(Publisher))
     
     data = {'EU_Sales': EU_Sales,
             'NA_Sales': NA_Sales,
