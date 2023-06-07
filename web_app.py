@@ -8,9 +8,9 @@ import plotly.graph_objects as go
 data_set = pd.read_csv('vgsales.csv')
 data_set= data_set.dropna()
 data_set.isna().sum()
-publishers = data['Publisher'].unique()
-platforms = data['Platform'].unique()
-genres = data['Genre'].unique()
+publishers = data_set['Publisher'].unique()
+platforms = data_set['Platform'].unique()
+genres = data_set['Genre'].unique()
 
 st.write("""
 # Game Succession Prediction
