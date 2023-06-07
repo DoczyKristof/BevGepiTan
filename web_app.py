@@ -5,6 +5,13 @@ import datetime
 import streamlit as st
 import plotly.graph_objects as go
 
+data_set = pd.read_csv('vgsales.csv')
+data_set= data_set.dropna()
+data_set.isna().sum()
+publishers = data['Publisher'].unique()
+platforms = data['Platform'].unique()
+genres = data['Genre'].unique()
+
 st.write("""
 # Game Succession Prediction
 ## This app hopefully might predict a game's succession based on data.
@@ -20,6 +27,7 @@ def user_input_features():
     EU_Sales = st.sidebar.slider('EU_Sales', 0.01, 30.02, 0.02)
     NA_Sales = st.sidebar.slider('NA_Sales', 0.01, 42.49, 0.49)
     JP_Sales = st.sidebar.slider('JP_Sales', 0.01, 15.22, 0.22)
+    Genre = st.sidebar.selectbox('Genre',(genres))
     
     data = {'EU_Sales': EU_Sales,
             'NA_Sales': NA_Sales,
